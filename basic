@@ -1,0 +1,34 @@
+Create application Deployment Manifest.
+➤ Deploy Deployment.
+kubectl create -f <Manifest File>
+➤ List Running Deployments.
+kubectl get deployments
+➤ List Running Replica Set.
+kubectl get rs
+➤ List Running Pods.
+kubectl get pods
+KUBERNETES : Basics of Kuebernetes
+➤ To see the labels automatically generated for each Pod.
+kubectl get pods --show-labels
+➤ Expose Deployment.
+kubectl expose deployment <deployment_name> —
+type=NodePort
+➤ Get Exposed Service.
+kubectl get service
+➤ Get Service Access URL.
+minikube service <service_name> —URL
+KUBERNETES : Basics of Kuebernetes
+➤ Upgrade Service in Deploymets.
+kubectl set image deployment/<deployment name>
+appname=<newimage>
+kubectl set image deployment/nginx-deployment
+nginx=nginx:1.17.1
+➤ Verify Roll-Out Status
+kubectl rollout status deployment/<deployment_name>
+➤ Verify Rollout History
+kubectl rollout history deployment/<deployment_name>
+KUBERNETES : Basics of Kuebernetes
+➤ Rollback the changes
+kubectl rollout undo deployment/<deployment_name>
+➤ Edit Deployment, add Revision History
+kubectl edit deployment/<deployment_name>
